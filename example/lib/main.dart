@@ -57,7 +57,7 @@ class _GeocodeViewState extends State<GeocodeView> {
 
     try{
       var geocoding = AppState.of(context).mode;
-      var results = await geocoding.findAddressesFromQuery(_controller.text);
+      var results = await geocoding.findAddressesFromQuery(_controller.text, "");
       this.setState(() {
         this.results = results;
       });
