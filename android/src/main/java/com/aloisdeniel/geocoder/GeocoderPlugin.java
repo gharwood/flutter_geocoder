@@ -213,6 +213,7 @@ public class GeocoderPlugin implements MethodCallHandler {
     result.put("subAdminArea", address.getSubAdminArea());
     result.put("addressLine", sb.toString());
     result.put("postalCode", address.getPostalCode());
+    result.put("subPremise"), address.getSubPremise());
 
     return result;
   }

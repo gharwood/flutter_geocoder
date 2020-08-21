@@ -112,6 +112,9 @@ class GoogleGeocoding implements Geocoding {
       else if(types.contains("premise")) {
         result["featureName"] = item["long_name"];
       }
+      else if(types.contains("subpremise")) {
+        result["subPremise"] = item["long_name"];
+      }
 
       result["featureName"] = result["featureName"] ?? result["addressLine"];
 
