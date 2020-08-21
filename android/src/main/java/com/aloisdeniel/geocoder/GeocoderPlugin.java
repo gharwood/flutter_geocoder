@@ -209,11 +209,9 @@ public class GeocoderPlugin implements MethodCallHandler {
     result.put("thoroughfare", address.getThoroughfare());
     result.put("subThoroughfare", address.getSubThoroughfare());
     result.put("adminArea", address.getAdminArea());
-    result.put("adminAreaShort", address.getAdminAreaShort());
     result.put("subAdminArea", address.getSubAdminArea());
     result.put("addressLine", sb.toString());
     result.put("postalCode", address.getPostalCode());
-    result.put("subPremise"), address.getSubPremise());
 
     return result;
   }
