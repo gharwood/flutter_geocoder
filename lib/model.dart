@@ -48,6 +48,8 @@ class Address {
   /// The administrative area name of the address
   final String adminArea;
 
+  final String adminAreaShort;
+
   /// The sub-administrative area name of the address
   final String subAdminArea;
 
@@ -63,7 +65,7 @@ class Address {
   /// The sub-thoroughfare name of the address
   final String subThoroughfare;
 
-  Address({this.coordinates, this.addressLine, this.countryName, this.countryCode, this.featureName, this.postalCode, this.adminArea, this.subAdminArea, this.locality, this.subLocality, this.thoroughfare, this.subThoroughfare});
+  Address({this.coordinates, this.addressLine, this.countryName, this.countryCode, this.featureName, this.postalCode, this.adminArea, this.adminAreaShort, this.subAdminArea, this.locality, this.subLocality, this.thoroughfare, this.subThoroughfare});
 
   /// Creates an address from a map containing its properties.
   Address.fromMap(Map map) :
@@ -76,6 +78,7 @@ class Address {
         this.locality = map["locality"],
         this.subLocality = map["subLocality"],
         this.adminArea = map["adminArea"],
+        this.adminAreaShort = map["adminAreaShort"],
         this.subAdminArea = map["subAdminArea"],
         this.thoroughfare = map["thoroughfare"],
         this.subThoroughfare = map["subThoroughfare"];
@@ -91,6 +94,7 @@ class Address {
     "locality": this.locality,
     "subLocality": this.subLocality,
     "adminArea": this.adminArea,
+    "adminAreaShort": this.adminAreaShort,
     "subAdminArea": this.subAdminArea,
     "thoroughfare": this.thoroughfare,
     "subThoroughfare": this.subThoroughfare,
